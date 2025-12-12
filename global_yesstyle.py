@@ -20,13 +20,13 @@ driver = webdriver.Chrome(options=options)
 
 try:
     driver.get(url)
-    time.sleep(5)
+    time.sleep(3)
 
     # 화면 비율 조정
-    wait = WebDriverWait(driver, 5)
+    # wait = WebDriverWait(driver, 5)
     driver.execute_script("document.body.style.zoom='70%'")
-    wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-
+    # wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+    time.sleep(3)
     # 화면 스크롤 내리기
     driver.execute_script("window.scrollTo(0, 100)")
     time.sleep(3)

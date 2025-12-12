@@ -22,16 +22,16 @@ driver = webdriver.Chrome(options=options)
 
 try:
     driver.get(url)
-    time.sleep(5)
+    time.sleep(3)
     # 새로고침 실시 (콘텐츠 로딩 문제 해결용)
     driver.refresh()
-    
+    time.sleep(3)
     # 화면 비율 조정
-    wait = WebDriverWait(driver, 5)
-    driver.execute_script("document.body.style.zoom='70%'")
-    wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-
-    driver.execute_script("window.scrollTo(0, 100)")
+    # wait = WebDriverWait(driver, 5)
+    driver.execute_script("document.body.style.zoom='50%'")
+    # wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+    time.sleep(3)
+    driver.execute_script("window.scrollTo(0, 200)")
     time.sleep(3)
 
     hour = time.localtime().tm_hour

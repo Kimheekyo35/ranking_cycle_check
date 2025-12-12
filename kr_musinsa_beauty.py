@@ -16,16 +16,21 @@ options.add_argument("--window-size=1920,1080")
 driver = webdriver.Chrome(options=options)
 try:
     driver.get(url)
-    time.sleep(5)
-    # 스크롤 다운
-    driver.execute_script("window.scrollTo(0,100)")
-    
     time.sleep(3)
+
+    # 화면 비율 조정 및 스크롤
+    driver.execute_script("document.body.style.zoom='50%'")
+    time.sleep(3)
+    
+    driver.execute_script("window.scrollTo(0,100)")
+    time.sleep(3)
+
     hour = time.localtime().tm_hour
     minute = time.localtime().tm_min
     create_directory(path)
     save_path = path / f"kr_musinsabeauty_{hour}시_{minute}분.png"
     driver.save_screenshot(save_path)
     print("캡쳐캡쳐📸")
+    
 finally:
     driver.quit()

@@ -18,16 +18,18 @@ driver = webdriver.Chrome(options=options)
 try:
     driver.get(url)
     time.sleep(3)
-    wait = WebDriverWait(driver,5)
-    wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-    # 스크롤 다운
+    # 화면 비율 조정 및 스크롤
     driver.execute_script("document.body.style.zoom='50%'")
+    time.sleep(3)
+
     driver.execute_script("window.scrollTo(0,100)")
-    wait = WebDriverWait(driver,5)
+    time.sleep(3)
+
     hour = time.localtime().tm_hour
     minute = time.localtime().tm_min
     create_directory(path)
     driver.save_screenshot(path / f"kr_kakaogift_{hour}시_{minute}분.png")
     print("캡쳐캡쳐📸")
+    
 finally:
     driver.quit()
