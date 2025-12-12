@@ -1,23 +1,21 @@
-
-
 from pathlib import Path
 import time
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
 from path_load import create_directory, make_path
 
 url = "https://ranking.rakuten.co.jp/daily/100939/?l2-id=ranking_a_top_gmenu"
 
 options = Options()
-# options.add_argument("--headless=new")
+options.add_argument("--headless=new")
 options.add_argument("--window-size=1728,1398")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
 
-path: Path = make_path()
+path: Path = make_path(__file__)
 create_directory(path)
 
 driver = webdriver.Chrome(options=options)

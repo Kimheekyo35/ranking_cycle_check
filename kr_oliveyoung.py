@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from path_load import make_path, create_directory
 from seleniumbase import SB
 
-path = make_path()
+path = make_path(__file__)
 options = Options()
 # cloudfare 우회 기능이 있는 SeleniumBase 사용
 # SB headless 모드 사용

@@ -11,7 +11,7 @@ options = webdriver.ChromeOptions()
 # options.add_argument("--headless=new")
 options.add_argument("--window-size=1920,1080")
 
-path = make_path()
+path = make_path(__file__)
 
 driver = webdriver.Chrome(options=options)
 driver.set_window_size(2304,1864)

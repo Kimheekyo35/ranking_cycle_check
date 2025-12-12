@@ -15,7 +15,7 @@ options = Options()
 # options.add_argument("--headless=new")
 options.add_argument("--window-size=1728,1398")
 
-path: Path = make_path()
+path: Path = make_path(__file__)
 create_directory(path)
 
 driver = webdriver.Chrome(options=options)

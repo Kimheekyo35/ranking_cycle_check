@@ -8,7 +8,7 @@ from path_load import create_directory
 
 url = "https://global.oliveyoung.com/display/page/best-seller?target=pillsTab1Nav1"
 
-path = make_path()
+path = make_path(__file__)
 
 options = Options()
 options.add_argument("--headless=new")

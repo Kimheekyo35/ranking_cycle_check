@@ -9,7 +9,7 @@ from path_load import create_directory
 
 url = "https://gift.kakao.com/ranking/best/delivery/2?priceRange=ALL"
 
-path = make_path()
+path = make_path(__file__)
 options = Options()
 # options.add_argument("--headless=new")
 options.add_argument("--window-size=1920,1080") 

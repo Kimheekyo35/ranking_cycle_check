@@ -7,7 +7,7 @@ from path_load import create_directory
 from path_load import make_path
 url = "https://www.musinsa.com/main/beauty/ranking?gf=A&storeCode=beauty&sectionId=231&contentsId=&categoryCode=104000&ageBand=AGE_BAND_ALL"
 
-path = make_path()
+path = make_path(__file__)
 
 options = Options()
 options.add_argument("--headless=new")
