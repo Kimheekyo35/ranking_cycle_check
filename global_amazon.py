@@ -23,15 +23,15 @@ try:
     driver.get(url)
     time.sleep(3)
     # 새로고침 설정
-    driver.refresh()
-    time.sleep(3)
+    # driver.refresh()
+    # time.sleep(3)
     # 화면 비율 조정
     # wait = WebDriverWait(driver, 5)
     driver.execute_script("document.body.style.zoom='50%'")
     time.sleep(3)
     # wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-    driver.execute_script("window.scrollTo(0, 500)")
-    time.sleep(5)
+    # driver.execute_script("window.scrollTo(0, 500)")
+    # time.sleep(5)
 
     hour = time.localtime().tm_hour
     minute = time.localtime().tm_min

@@ -27,7 +27,7 @@ try:
     driver.refresh()
 
     # 화면 비율 조정
-    driver.execute_script("document.body.style.zoom='70%'")
+    driver.execute_script("document.body.style.zoom='50%'")
     time.sleep(3)   
 
     driver.execute_script("window.scrollTo(0, 100)")
