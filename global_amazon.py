@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from path_load import create_directory, make_path
 
-url = "https://www.amazon.com/stores/page/A9D20D90-ADA2-4603-8F3F-345CC1002580?ingress=0&visitId=53d8d4bd-ddc9-4dfa-8b11-8712f8234ac7&channel=SA_Amazon%20Keyword"
+url = "https://www.amazon.com/Best-Sellers-Beauty-Personal-Care/zgbs/beauty/ref=zg_bs_nav_beauty_0"
 
 options = Options()
 # options.add_argument("--headless=new")
@@ -27,7 +27,7 @@ try:
     time.sleep(3)
     # 화면 비율 조정
     # wait = WebDriverWait(driver, 5)
-    driver.execute_script("document.body.style.zoom='60%'")
+    driver.execute_script("document.body.style.zoom='50%'")
     time.sleep(3)
     # wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
     driver.execute_script("window.scrollTo(0, 500)")
