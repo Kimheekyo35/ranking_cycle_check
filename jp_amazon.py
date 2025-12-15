@@ -31,7 +31,7 @@ try:
     driver.execute_script("document.body.style.zoom='50%'")
     # wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
     time.sleep(3)
-    driver.execute_script("window.scrollTo(0, 200)")
+    driver.execute_script("window.scrollTo(0, 100)")
     time.sleep(3)
 
     hour = time.localtime().tm_hour
