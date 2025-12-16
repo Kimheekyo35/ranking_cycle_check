@@ -22,9 +22,9 @@ driver = webdriver.Chrome(options=options)
 try:
     driver.get(url)
     time.sleep(3)
-    # 새로고침 설정
-    # driver.refresh()
-    # time.sleep(3)
+    #새로고침 설정
+    driver.refresh()
+    time.sleep(3)
     # 화면 비율 조정
     # wait = WebDriverWait(driver, 5)
     driver.execute_script("document.body.style.zoom='50%'")
