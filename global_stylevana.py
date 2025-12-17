@@ -11,7 +11,7 @@ from path_load import create_directory, make_path
 options = Options()
 options.add_argument("--window-size=1728,1398")
 
-path: Path = make_path(__file__)
+path: Path = make_path()
 create_directory(path)
 
 with SB(uc=True, test=True, headless=False) as sb:
@@ -19,7 +19,7 @@ with SB(uc=True, test=True, headless=False) as sb:
     try:
         # seleniumbase로 
         url = "https://www.stylevana.com/en_US/best-sellers.html"
-        sb.uc_open_with_reconnect(url, reconnect_time = 10)
+        sb.uc_open_with_reconnect(url, reconnect_time = 6)
         sb.uc_gui_handle_captcha()
         time.sleep(2)
         # 팝업창 떠서 새로고침 실시
@@ -45,6 +45,8 @@ with SB(uc=True, test=True, headless=False) as sb:
             hour = time.localtime().tm_hour
             minute = time.localtime().tm_min
             save_path = path / f"global_stylevana_{hour}시_{minute}분.png"
+            # 이미지 저장
+            image = sb.driver.save_screenshot(save_path)
             print("캡쳐캡쳐📸")
         except Exception as e:
             print(f"Error:{e}")
