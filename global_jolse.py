@@ -8,14 +8,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from path_load import create_directory, make_path
 
-url = "https://jolse.com/category/best/25/?page=2"
+url = "https://jolse.com/category/best/25/?cate_no=25&sort_method=6#Product_ListMenu"
 
 options = Options()
 # options.add_argument("--headless=new")
 options.add_argument("--window-size=1728,1398")
 
 path: Path = make_path()
-create_directory(path)
+create_directory(path)                  
 
 driver = webdriver.Chrome(options=options)
 
