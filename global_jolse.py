@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from path_load import create_directory, make_path
 
-url = "https://jolse.com/category/best/25/"
+url = "https://jolse.com/category/best/25/?page=2"
 
 options = Options()
 # options.add_argument("--headless=new")
@@ -28,7 +28,7 @@ try:
     time.sleep(3)
     # wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
     # 스크롤 내리기
-    driver.execute_script("window.scrollTo(0, 180)")
+    driver.execute_script("window.scrollTo(0, 200)")
     time.sleep(3)
     # 파일 저장
     hour = time.localtime().tm_hour

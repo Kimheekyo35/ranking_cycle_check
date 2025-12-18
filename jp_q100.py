@@ -30,7 +30,7 @@ try:
     driver.execute_script("document.body.style.zoom='50%'")
     time.sleep(3)   
 
-    driver.execute_script("window.scrollTo(0, 100)")
+    driver.execute_script("window.scrollTo(0, 5000)")
     time.sleep(3)
 
     hour = time.localtime().tm_hour
